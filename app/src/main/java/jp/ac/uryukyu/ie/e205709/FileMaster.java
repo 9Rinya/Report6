@@ -3,10 +3,6 @@
  */
 package jp.ac.uryukyu.ie.e205709;
 
-// import java.io.File;
-// import java.io.FileReader;
-// import java.io.FileNotFoundException;
-// import java.io.IOException;
 import java.util.Scanner;
 
 class FileMaster{
