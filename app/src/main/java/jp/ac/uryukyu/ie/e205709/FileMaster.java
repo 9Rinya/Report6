@@ -17,10 +17,8 @@ class FileMaster{
     System.out.println("使用したい機能を選択してください===========================");
     System.out.println("1-キャラクター情報の検索");
     System.out.println("2-キャラクター情報の追加");
-    String input_number = scanner.nextLine();
+    String input_number = scanner.next();
     System.out.println(input_number+"が選択されました");
-    System.out.println();
-    scanner.close();
     
     Infomation     info     = new Infomation();
     Add_Infomation add_info = new Add_Infomation();
