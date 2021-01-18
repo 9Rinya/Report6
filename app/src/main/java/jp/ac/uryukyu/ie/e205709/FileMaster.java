@@ -16,16 +16,26 @@ class FileMaster{
     Scanner scanner = new Scanner(System.in);
     System.out.println("使用したい機能を選択してください===========================");
     System.out.println("1-キャラクター情報の検索");
+    System.out.println("2-キャラクター情報の追加");
     String input_number = scanner.nextLine();
     System.out.println(input_number+"が選択されました");
     scanner.close();
     
-    Infomation info = new Infomation();
+    Infomation     info     = new Infomation();
+    Add_Infomation add_info = new Add_Infomation();
 
-    switch (1){
-      case 1:
+
+    switch (input_number){
+      case "1":
       info.reference_Infomation(args);
+      break;
+
+      case "2":
+      add_info.sum_Infomation(args);
+      break;
+
     }
+
   }
   
 }
