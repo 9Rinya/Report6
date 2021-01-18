@@ -3,10 +3,10 @@
  */
 package jp.ac.uryukyu.ie.e205709;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+// import java.io.File;
+// import java.io.FileReader;
+// import java.io.FileNotFoundException;
+// import java.io.IOException;
 import java.util.Scanner;
 
 class FileMaster{
@@ -19,6 +19,7 @@ class FileMaster{
     System.out.println("2-キャラクター情報の追加");
     String input_number = scanner.nextLine();
     System.out.println(input_number+"が選択されました");
+    System.out.println();
     scanner.close();
     
     Infomation     info     = new Infomation();
