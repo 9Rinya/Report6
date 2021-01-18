@@ -7,23 +7,37 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Scanner;
 
-class FileDisplay{
-  public static void main(String args[]){
-    try{
-      File file = new File("/Users/hirayamaosamunari/prog2/report6/Character_info.txt");//ファイル指定
-      FileReader filereader = new FileReader(file);
+class FileMaster{
+  void function_select(String args[]){
 
-      int ch;
-      while((ch = filereader.read()) != -1){
-        System.out.print((char)ch);
-      }
+    //ユーザー入力による機能選択
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("使用したい機能を選択してください===========================");
+    System.out.println("1-キャラクター情報の検索");
+    String input_number = scanner.nextLine();
+    System.out.println(input_number+"が選択されました");
+    scanner.close();
 
-      filereader.close();//fileを閉じる
-    }catch(FileNotFoundException e){
-      System.out.println(e);
-    }catch(IOException e){
-      System.out.println(e);
+    switch (input_number){
+      case "1":
+      try{
+        File file = new File("/Users/hirayamaosamunari/prog2/report6/Character_info.txt");//ファイル指定
+        FileReader filereader = new FileReader(file);
+
+        int ch;
+        while((ch = filereader.read()) != -1){
+          System.out.print((char)ch);
+        }
+
+        filereader.close();//fileを閉じる
+      }catch(FileNotFoundException e){
+        System.out.println(e);
+      }catch(IOException e){
+       System.out.println(e);
+     }
+      break;
     }
   }
 }
