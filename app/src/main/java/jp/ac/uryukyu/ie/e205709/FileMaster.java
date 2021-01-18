@@ -19,26 +19,14 @@ class FileMaster{
     String input_number = scanner.nextLine();
     System.out.println(input_number+"が選択されました");
     scanner.close();
+    
+    Infomation info = new Infomation();
 
-    switch (input_number){
-      case "1":
-      try{
-        File file = new File("/Users/hirayamaosamunari/prog2/report6/Character_info.txt");//ファイル指定
-        FileReader filereader = new FileReader(file);
-
-        int ch;
-        while((ch = filereader.read()) != -1){
-          System.out.print((char)ch);
-        }
-
-        filereader.close();//fileを閉じる
-      }catch(FileNotFoundException e){
-        System.out.println(e);
-      }catch(IOException e){
-       System.out.println(e);
-     }
-      break;
+    switch (1){
+      case 1:
+      info.reference_Infomation(args);
     }
   }
+  
 }
 
